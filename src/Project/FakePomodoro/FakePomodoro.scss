@@ -1,0 +1,161 @@
+.pomodoro-clock {
+  padding: 40px;
+  margin: 0px;
+  font-size: 20px;
+  background-color: #222;
+  min-height: 100vh;
+  text-align: center;
+
+  .header {
+    text-align: center;
+    margin-top: 25px;
+    color: #06f1f6;
+    text-transform: capitalize;
+  }
+
+  .Time {
+    // color:whitesmoke;
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+    width: 350px;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    border: 2px solid silver;
+    margin: 0 auto;
+    color: #06f1f6;
+    box-shadow: 0 0 5px 2px;
+
+    .number {
+      padding: 1rem;
+    }
+
+    .number p {
+      font-size: 2rem;
+    }
+
+  }
+
+  .Control {
+    .btn {
+      margin: 0.25rem 0.125rem;
+      padding: 0.35rem 1.25rem;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.6px;
+      border-radius: 0.3rem;
+      color: #fff;
+      background-color: #000;
+      border: none;
+      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .btn:hover,
+    .btn-accept:hover,
+    .btn-warning:hover {
+      cursor: pointer;
+      box-shadow: none;
+      transition: 0.3s ease;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    /* Btn Types*/
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: rgba(220, 53, 69, 0.75);
+    }
+
+    .btn-warning {
+      background-color: #ffc107;
+      color: white;
+      color: #000;
+    }
+
+    .btn-warning:hover {
+      background: rgba(255, 193, 7, 0.75);
+    }
+
+    .btn-accept {
+      background-color: #284ea7;
+      color: white;
+    }
+
+    .btn-accept:hover {
+      background: rgba(40, 78, 167, 0.75);
+    }
+
+    .btn-lg {
+      margin: 0.3125rem 0.15625rem;
+      padding: 0.4375rem 1.5625rem;
+      font-size: 20px;
+    }
+  }
+
+  .Settings {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .Section {
+      text-align: center;
+
+      label {
+        font-weight: 700;
+        color: #06f1f6;
+        margin-bottom: 10px;
+
+      }
+
+      button {
+        caption-side: top;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border: 1px solid #4ebfc9;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 6px;
+        outline: none;
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button:not(.disable):hover {
+        cursor: pointer;
+        background-color: #4ebfc9;
+      }
+
+      button.disable {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      span {
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 50%;
+        color: #444;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.1rem;
+      }
+
+    }
+  }
+}
