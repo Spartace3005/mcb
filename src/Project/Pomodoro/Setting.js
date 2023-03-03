@@ -1,26 +1,28 @@
+import { React, useContext } from "react";
+import { SettingProvider } from "./settingProvider";
+import "./setting.scss";
 
-const Setting = (props) => {
-    const {increaseBreak, decreaseBreak, increaseStudy, decreaseStudy,breaktime,studytime} = props
-    return(
-        <div className="Settings">
-        <div className="Section">
-          <label>Break Time</label>
-          <div>
-            <button onClick={decreaseBreak}>-</button>
-            <span>{breaktime}</span> 
-            <button onClick={increaseBreak}>+</button>
-          </div>
-        </div>
-        <div className="Section">
-          <label>Study Time</label>
-          <div>
-            <button onClick={decreaseStudy}>-</button>
-            <span>{studytime}</span>
-            <button onClick={increaseStudy}>+</button>
-          </div>
+const Setting = ({ children }) => {
+  const settingValue = useContext(SettingProvider);
+  return (
+    <div className="Settings">
+      {/* <div className="Section">
+        <label>Break Time</label>
+        <div>
+          // <button onClick={settingValue.decreaseBreak}>-</button>
+          <span>{settingValue.breaktime}</span>
+          <button onClick={settingValue.increaseBreak}>+</button>
         </div>
       </div>
-    )
-}
-
-export default Setting
+      <div className="Section">
+        <label>Study Time</label>
+        <div>
+          <button onClick={settingValue.decreaseStudy}>-</button>
+          <span>{settingValue.studytime}</span>
+          <button onClick={settingValue.increaseStudy}>+</button>
+        </div>
+      </div> */}
+    </div>
+  );
+};
+export default Setting; 

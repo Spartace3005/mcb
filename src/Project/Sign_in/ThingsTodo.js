@@ -51,13 +51,13 @@ const ThingsTodo = () => {
         {listTodo.map((item, index) => {
           // console.log("check item:", item,index)
           return (
-            <div key={item.id}>
+            <ul key={item.id}>
               <li className="thing">
                 {item.id}.{item.name}
                 &nbsp; &nbsp;{" "}
                 <span onClick={() => handleDelete(item.id)}>x</span>
               </li>
-            </div>
+            </ul>
           );
         })}
       </div>

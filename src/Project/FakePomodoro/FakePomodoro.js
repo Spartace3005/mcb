@@ -57,7 +57,7 @@ const FakePomodoro = () => {
             setSecondleft(breaktime * 60);
           } else if (timelabel === "Break") {
             setTimelable("Study");
-            setSecondleft(studytime * 60);
+            secondleft(studytime * 60);
           }
         } else {
           setSecondleft(secondleft - 1);
